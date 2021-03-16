@@ -55,4 +55,19 @@ public class MyNodeTest {
         Assert.assertTrue(result);
     }
 
+    @Test
+    public void first_number_should_be_deleted_by_pop() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        LinkedList linkedList = new LinkedList();
+        linkedList.append(myFirstNode);
+        linkedList.append(mySecondNode);
+        linkedList.append(myThirdNode);
+        linkedList.popFirst();
+        linkedList.printMyNodes();
+        boolean result = linkedList.head.equals(mySecondNode) &&
+                         linkedList.tail.equals(myThirdNode);
+        Assert.assertTrue(result);
+    }
 }
