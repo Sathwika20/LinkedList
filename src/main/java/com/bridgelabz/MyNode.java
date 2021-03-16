@@ -26,8 +26,4 @@ public class MyNode<K> implements INode<K> {
         this.next = next;
     }
 
-    public static <K> K printKeys(K key) {
-        System.out.println(" key is:" + key);
-        return key;
-    }
 }
