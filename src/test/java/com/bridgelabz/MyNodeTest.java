@@ -87,4 +87,21 @@ public class MyNodeTest {
                          linkedList.tail.equals(mySecondNode);
         Assert.assertTrue(result);
     }
+
+    @Test
+    public void when_three_numbers_given_search_a_number() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        LinkedList linkedList = new LinkedList();
+        linkedList.append(myFirstNode);
+        linkedList.append(mySecondNode);
+        linkedList.append(myThirdNode);
+        linkedList.search(mySecondNode);
+        linkedList.printMyNodes();
+        boolean result = linkedList.head.equals(myFirstNode) &&
+                linkedList.head.getNext().equals(mySecondNode);
+        linkedList.tail.equals(myThirdNode);
+        Assert.assertTrue(result);
+    }
 }
